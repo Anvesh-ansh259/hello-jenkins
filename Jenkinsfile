@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR-USERNAME/hello-jenkins.git'
+                git branch: 'main',
+                    url: 'https://github.com/Anvesh-ansh259/hello-jenkins.git',
+                    credentialsId: '0a513b4c-6947-45fb-b94c-86c29611e680'
             }
         }
         stage('Build') {
@@ -27,4 +29,3 @@ pipeline {
         }
     }
 }
-
